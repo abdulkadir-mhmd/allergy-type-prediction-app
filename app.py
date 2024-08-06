@@ -130,9 +130,13 @@ def main():
             """)
         elif selected == "About":
             def resize_image(image_path, width, height):
-                with Image.open(image_path) as img:
-                    img = img.resize((width, height), Image.LANCZOS)
-                    return img
+                try:
+                    with Image.open(image_path) as img:
+                        img = img.resize((width, height), Image.LANCZOS)
+                        return img
+                except Exception as e:
+                    st.error(f"Error processing {image_path}: {e}")
+                    return None
 
             target_width = 140
             target_height = 140
@@ -142,20 +146,28 @@ def main():
             image3_resized = resize_image("image3.jpeg", target_width, target_height)
             image4_resized = resize_image("image4.jpeg", target_width, target_height)
 
-            image1_resized.save("resized_image1.png")
-            image2_resized.save("resized_image2.jpeg")
-            image3_resized.save("resized_image3.jpeg")
-            image4_resized.save("resized_image4.jpeg")
+            if image1_resized:
+                image1_resized.save("resized_image1.png")
+            if image2_resized:
+                image2_resized.save("resized_image2.jpeg")
+            if image3_resized:
+                image3_resized.save("resized_image3.jpeg")
+            if image4_resized:
+                image4_resized.save("resized_image4.jpeg")
 
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.image("resized_image1.png", caption="Abdulkadir Mohamed")
+                if image1_resized:
+                    st.image("resized_image1.png", caption="Abdulkadir Mohamed")
             with col2:
-                st.image("resized_image2.jpeg", caption="Abdifitah Maow Sufi")
+                if image2_resized:
+                    st.image("resized_image2.jpeg", caption="Abdifitah Maow Sufi")
             with col3:
-                st.image("resized_image3.jpeg", caption="Abdullahi Muhumed")
+                if image3_resized:
+                    st.image("resized_image3.jpeg", caption="Abdullahi Muhumed")
             with col4:
-                st.image("resized_image4.jpeg", caption="Omar Abdirisaq")
+                if image4_resized:
+                    st.image("resized_image4.jpeg", caption="Omar Abdirisaq")
             st.markdown("""
                 # About This Website
 
