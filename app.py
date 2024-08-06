@@ -132,13 +132,13 @@ def main():
             st.title("About Us")
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.image("image.png", width=140, caption="Abdulkadir Mohamed")
+                st.image("image1.png", width=140, caption="Abdulkadir Mohamed")
             with col2:
-                st.image("icon.png", width=140, caption="Abdifitah Maow Sufi")
+                st.image("image2.png", width=140, caption="Abdifitah Maow Sufi")
             with col3:
-                st.image("icon.png", width=140, caption="Abdullahi Muhumed")
+                st.image("image3.png", width=140, caption="Abdullahi Muhumed")
             with col4:
-                st.image("icon.png", width=140, caption="Omar Abdirisaq")
+                st.image("image4.png", width=140, caption="Omar Abdirisaq")
             st.markdown("""
                 # About This Website
 
@@ -170,6 +170,7 @@ def main():
                 ## Contact Information
                 If you have any questions, feedback, or need support, please feel free to reach out:
                 - **Email:** abdulkadir00b@gmail.com
+                - **GitHub:** https://github.com/abdulkadir-mhmd
                 - **Phone:** +252612537535
 
                 Thank you for using our application!
