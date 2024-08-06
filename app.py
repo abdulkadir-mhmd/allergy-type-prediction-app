@@ -132,8 +132,7 @@ def main():
             st.title("About Us")
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                # st.image("image1.png", width=140, caption="Abdulkadir Mohamed")
-                st.image("image2.jpg", width=140, caption="Abdifitah Maow Sufi")
+                st.image("image1.png", width=140, caption="Abdulkadir Mohamed")
             with col2:
                 st.image("image2.jpg", width=140, caption="Abdifitah Maow Sufi")
             with col3:
