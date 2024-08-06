@@ -180,6 +180,7 @@ def main():
             st.title(f"You can reach us at {selected}")
             st.write("Get in touch with us!")
             st.write("Email: abdulkadir00b@gmail.com")
+            st.write("GitHub: https://github.com/abdulkadir-mhmd")
             st.write("Phone: +252612537535")
     
     elif choice == "Login":
