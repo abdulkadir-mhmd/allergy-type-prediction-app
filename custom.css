@@ -1,0 +1,10 @@
+body {
+    background-color: #f0f0f0;
+    /* background-size: 100%; */
+    color: #333333;
+  }
+  
+  .stButton button {
+    background-color: #ffffff;
+    color: #333333;
+  }
