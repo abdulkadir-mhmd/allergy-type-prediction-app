@@ -132,13 +132,13 @@ def main():
             st.title("About Us")
             col1, col2, col3, col4 = st.columns(4)
             with col1:
-                st.image("image1.png", width=140, height=140, caption="Abdulkadir Mohamed")
+                st.image("image1.png", width=140, caption="Abdulkadir Mohamed")
             with col2:
-                st.image("image2.jpeg", width=140, height=140, caption="Abdifitah Maow Sufi")
+                st.image("image2.jpg", width=140, caption="Abdifitah Maow Sufi")
             with col3:
-                st.image("image3.jpeg", width=140, height=140, caption="Abdullahi Muhumed")
+                st.image("image3.jpg", width=140, caption="Abdullahi Muhumed")
             with col4:
-                st.image("image4.jpeg", width=140, height=140, caption="Omar Abdirisaq")
+                st.image("image4.jpg", width=140, caption="Omar Abdirisaq")
             st.markdown("""
                 # About This Website
 
